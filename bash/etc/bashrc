@@ -1,0 +1,180 @@
+##===----------------------------------------------------------------------===##
+#
+#                               Bash Profile 
+#
+#   0. Environment Variables
+#   1. Terminal Control
+#   2. LS Color Control
+#   3. Locale Category
+#   4. Prompting String
+#   5. Shell Options [editor ...]
+#   6. Additional Shell Options 
+#   7. Editor
+#   8. History
+#   9. Aliases
+#   a. Locations and Navigation
+#   b. PATH ...
+#   c. Extension Profile Hook
+#
+##===----------------------------------------------------------------------===##
+
+##==
+#
+# Environment Variables
+#
+##==
+export OS=$(uname)
+export HN=$(hostname -s)
+
+export dateformat="%Y-%m-%d"
+export timeformat="%H:%M:%S"
+
+##==
+#
+# Terminal Control [STTY(1): /ixon]
+#
+##==
+stty -ixon
+
+##==
+#
+# Directory Contents Color Control [LS(1)]
+#
+##==
+#   The color designators are as follows:
+#       a     black
+#       b     red
+#       c     green
+#       d     brown
+#       e     blue
+#       f     magenta
+#       g     cyan
+#       h     light grey
+#       A     bold black, usually shows up as dark grey
+#       B     bold red
+#       C     bold green
+#       D     bold brown, usually shows up as yellow
+#       E     bold blue
+#       F     bold magenta
+#       G     bold cyan
+#       H     bold light grey; looks like bright white
+#       x     default foreground or background
+##==
+#   The order of the attributes are as follows:
+#       1.    directory
+#       2.    symbolic link
+#       3.    socket
+#       4.    pipe
+#       5.    executable
+#       6.    block special
+#       7.    character special
+#       8.    executable with setuid bit set
+#       9.    executable with setgid bit set
+#       10.   directory writable to others, with sticky bit
+#       11.   directory writable to others, without sticky bit
+##==
+export CLICOLOR=1
+export LSCOLORS=exfxcxdxbxegedabagacad
+
+##==
+#
+# Locale Category [BASH(1): /LANG]
+#
+##==
+export LANG=en_US.UTF-8
+export LC_ALL=$LANG
+
+##==
+#
+# Prompting String [BASH(1): /^PROMPTING]
+#
+##==
+export PS1=$PS1'[${HOSTNAME}]'
+export PS1=$PS1'[${USER}]'
+export PS1=$PS1'[${PWD}]'
+export PS1=''
+export PS1=$PS1'[$(date +%Y-%m-%d)]'
+export PS1=$PS1'[$(date +%H:%M:%S)]'
+export PS1=$PS1'[\w]'
+
+##==
+#
+# Shell Options [list options: set]
+#
+##==
+set -o vi
+set -o emacs
+
+##==
+#
+# Additional Shell Options [list options: shopt]
+#
+##==
+shopt -s cdspell
+
+##==
+#
+# Editor [BASH(1): /C-xC-e]
+#
+##==
+EDITOR=vim
+
+##==
+#
+# History Database [BASH(1): /^HISTORY]
+#
+##==
+export HISTTIMEFORMAT='%F %T  '
+export HISTIGNORE='ls:l:ll:ls *"cd:cd[a-z]:cd[a-z][a-z]:cp[a-z][a-z]:pwd:history:'
+export HISTCONTROL=ignoredups
+export HISTSIZE=10000
+
+##==
+#
+# Command Aliases [BASH(1): /^ALIASES]
+#
+##==
+alias reload='source $HOME/.bash_profile'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias  l='ls -l'
+alias ll='ls -lA'
+
+##==
+#
+# Locations: repositories & projects
+#
+##==
+export RP_HOME=$HOME/repositories
+export PJ_HOME=$HOME/projects
+alias cdrp='cd $RP_HOME'
+alias cdpj='cd $PJ_HOME'
+
+##==
+#
+# Locations: downloads & archive
+#
+##==
+export DL_HOME=$HOME/downloads
+export AR_HOME=$HOME/archive
+alias cdd='cd $DL_HOME'
+alias cda='cd $AR_HOME'
+
+##==
+#
+# PATH and DYLD_LIBRARY_PATH
+#
+##==
+[ "${_PATH-no}" != "no" ] && export PATH=$PATH:$_PATH
+[ "${_DYLD_LIBRARY_PATH-no}" != "no" ] && export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$_DYLD_LIBRARY_PATH
+
+##==
+#
+# Extension: Load (source) bash configurations accordingly
+#
+##==
+[ -r ~/.bashrc ] && . ~/.bashrc
+
+##===----------------------------------------------------------------------===##
+
