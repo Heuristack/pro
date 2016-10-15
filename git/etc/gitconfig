@@ -1,0 +1,9 @@
+[user]
+	name = Lance LI
+	email = heuristack@gmail.com
+[alias]
+	s = status
+	b = branch
+	r = remote
+	d = diff -w
+
