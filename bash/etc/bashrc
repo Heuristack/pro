@@ -117,7 +117,7 @@ shopt -s cdspell
 # Editor [BASH(1): /C-xC-e]
 #
 ##==
-EDITOR=vim
+export EDITOR=vim
 
 ##==
 #
