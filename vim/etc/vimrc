@@ -1,90 +1,18 @@
-""''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''""
-"
-"
-"                   VIM Run Commands (Configuration)  
-"
-"
-""''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''""
+":h set
+":h option-list
+se tf
+se nu
+se ts=4 sts=4 sw=4 et sta ai cin sw=4
+se hls is ic
+se sb sr
+se cul
 
-""'''
-"
-" fast navigation
-"
-""'''
-set ttyfast
+":h highlight
+hi CursorLine cterm=NONE ctermbg=LightGrey ctermfg=None
 
-""'''
-"
-" syntax
-"
-""'''
-syntax on
+":h noremap
+no <c-k> <c-w>
 
-""'''
-"
-" line num: set nu; set nu!;
-"
-""'''
-set number
+":h syntax
+sy on
 
-""'''
-"
-" spaces 
-"
-""'''
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set cindent shiftwidth=4
-set smarttab
-set expandtab
-set autoindent
-
-""'''
-"
-" ESC remap
-"
-""'''
-"map! jk <esc>
-"map! jj <esc>
-""'''
-noremap <c-k> <c-w>
-
-""'''
-"
-" background color
-"
-""'''
-"set background=dark
-
-""'''
-"
-" highlight line
-"
-""'''
-set cursorline
-highlight CursorLine cterm=NONE ctermbg=LightGrey  ctermfg=None
-
-""'''
-"
-" highlight column
-"
-""'''
-"set cursorcolumn
-highlight CursorColumn cterm=NONE ctermbg=DarkGrey ctermfg=NONE
-
-""'''
-"
-" highlight search
-"
-""'''
-set hlsearch
-
-""'''
-"
-" incremental search
-"
-""'''
-set incsearch
-
-""''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''""
