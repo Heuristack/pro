@@ -111,6 +111,8 @@ set -o emacs
 #
 ##==
 shopt -s cdspell
+shopt -s cmdhist
+shopt -s lithist
 
 ##==
 #
