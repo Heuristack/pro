@@ -92,8 +92,8 @@ export LC_ALL=$LANG
 export PS1=$PS1'[${HOSTNAME}]'
 export PS1=$PS1'[${USER}]'
 export PS1=$PS1'[${PWD}]'
-export PS1=''
 export PS1=$PS1'[$(date +%Y-%m-%d)]'
+export PS1=''
 export PS1=$PS1'[$(date +%H:%M:%S)]'
 export PS1=$PS1'[\w]'
 
