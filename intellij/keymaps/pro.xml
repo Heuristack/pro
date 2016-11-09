@@ -1,0 +1,49 @@
+<keymap version="1" name="pro" parent="Mac OS X 10.5+">
+  <action id="EditorScrollDown">
+    <keyboard-shortcut first-keystroke="control PAGE_DOWN" />
+  </action>
+  <action id="EditorScrollUp">
+    <keyboard-shortcut first-keystroke="control PAGE_UP" />
+  </action>
+  <action id="EditorToggleColumnMode">
+    <keyboard-shortcut first-keystroke="shift meta 8" />
+    <keyboard-shortcut first-keystroke="shift meta BACK_SLASH" />
+  </action>
+  <action id="EditorToggleShowLineNumbers">
+    <keyboard-shortcut first-keystroke="control meta alt L" />
+  </action>
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="control alt ENTER" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="control alt DOWN" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="control alt LEFT" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="control alt RIGHT" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="control alt UP" />
+  </action>
+  <action id="Synchronize">
+    <keyboard-shortcut first-keystroke="meta alt Y" />
+    <keyboard-shortcut first-keystroke="control meta alt Y" />
+  </action>
+  <action id="TabsPlacementNone">
+    <keyboard-shortcut first-keystroke="control meta alt 0" />
+  </action>
+  <action id="TabsPlacementTop">
+    <keyboard-shortcut first-keystroke="control meta alt 9" />
+  </action>
+  <action id="TogglePowerSave">
+    <keyboard-shortcut first-keystroke="control meta alt P" />
+  </action>
+  <action id="ViewNavigationBar">
+    <keyboard-shortcut first-keystroke="control meta alt N" />
+  </action>
+  <action id="ViewStatusBar">
+    <keyboard-shortcut first-keystroke="control meta alt S" />
+  </action>
+</keymap>
