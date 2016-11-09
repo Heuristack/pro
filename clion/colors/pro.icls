@@ -105,6 +105,12 @@
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
+    <option name="OC.MACRO_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="8b4513" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
     <option name="OC.NAMESPACE_LIKE">
       <value>
         <option name="FOREGROUND" value="ee82ee" />
