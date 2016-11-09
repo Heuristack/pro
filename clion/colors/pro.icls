@@ -150,19 +150,19 @@
     </option>
     <option name="OC.STRUCT_LIKE">
       <value>
-        <option name="FOREGROUND" value="4169e1" />
+        <option name="FOREGROUND" value="1e90ff" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="OC.TEMPLATE_TYPE">
       <value>
-        <option name="FOREGROUND" value="ff" />
+        <option name="FOREGROUND" value="ced1" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="OC.TEMPLATE_VALUE">
       <value>
-        <option name="FOREGROUND" value="ffd700" />
+        <option name="FOREGROUND" value="d2b48c" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
