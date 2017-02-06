@@ -19,3 +19,6 @@ nn <cr> :noh<cr><cr>
 ":h syntax
 sy on
 
+":h grepprg
+se gp=grep\ --color=always\ -n\ $*\ /dev/null
+
