@@ -22,3 +22,6 @@ sy on
 ":h grepprg
 se gp=grep\ --color=always\ -n\ $*\ /dev/null
 
+":h laststatus
+se ls=0
+
