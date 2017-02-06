@@ -10,8 +10,11 @@ se cul
 ":h highlight
 hi CursorLine cterm=NONE ctermbg=LightGrey ctermfg=None
 
-":h noremap
+":h no
 no <c-k> <c-w>
+
+":h nn
+nn <cr> :noh<cr><cr>
 
 ":h syntax
 sy on
