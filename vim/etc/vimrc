@@ -28,3 +28,6 @@ se ls=0
 ":h wrap
 se nowrap
 
+":h autocmd
+au BufWritePre * %s/\s\+$//e
+
