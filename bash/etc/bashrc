@@ -1,6 +1,6 @@
 ##===----------------------------------------------------------------------===##
 #
-#                               Bash Profile 
+#                               Bash Profile
 #
 #   0. Environment Variables
 #   1. Terminal Control
@@ -8,7 +8,7 @@
 #   3. Locale Category
 #   4. Prompting String
 #   5. Shell Options [editor ...]
-#   6. Additional Shell Options 
+#   6. Additional Shell Options
 #   7. Editor
 #   8. History
 #   9. Aliases
@@ -25,9 +25,6 @@
 ##==
 export OS=$(uname)
 export HN=$(hostname -s)
-
-export dateformat="%Y-%m-%d"
-export timeformat="%H:%M:%S"
 
 ##==
 #
@@ -74,7 +71,7 @@ stty -ixon
 #       11.   directory writable to others, without sticky bit
 ##==
 export CLICOLOR=1
-export LSCOLORS=Exfxcxdxbxegedabagacad
+export LSCOLORS=ExFxcxdxbxegedabagacad
 
 ##==
 #
@@ -155,13 +152,17 @@ alias cdpj='cd $PJ_HOME'
 
 ##==
 #
-# Locations: downloads & archive
+# Locations: archive & downloads & tmp
 #
 ##==
-export DL_HOME=$HOME/downloads
 export AR_HOME=$HOME/archive
-alias cdd='cd $DL_HOME'
+export DL_HOME=$HOME/downloads
+export TM_HOME=$HOME/tmp
 alias cda='cd $AR_HOME'
+alias cdd='cd $DL_HOME'
+alias cdt='cd $TM_HOME'
+alias ard='mkdir -p $AR_HOME/"D$(date +%Y%m%d)"; mv $DL_HOME/* $_'
+alias art='mkdir -p $AR_HOME/"T$(date +%Y%m%d)"; mv $TM_HOME/* $_'
 
 ##==
 #
