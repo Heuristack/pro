@@ -78,6 +78,12 @@
   <action id="GotoPreviousBookmark">
     <keyboard-shortcut first-keystroke="ctrl meta p" />
   </action>
+  <action id="MethodDown">
+    <keyboard-shortcut first-keystroke="shift ctrl down" />
+  </action>
+  <action id="MethodUp">
+    <keyboard-shortcut first-keystroke="shift ctrl up" />
+  </action>
   <action id="RecentProjectListGroup">
     <keyboard-shortcut first-keystroke="ctrl meta alt o" />
   </action>
