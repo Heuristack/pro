@@ -104,12 +104,17 @@ set -o emacs
 
 ##==
 #
-# Additional Shell Options [list options: shopt]
+# Additional Shell Options [list options: shopt -p]
 #
 ##==
-shopt -s cdspell
+shopt -s checkhash
+shopt -s histappend
+shopt -s histreedit
+shopt -s histverify
 shopt -s cmdhist
-shopt -s lithist
+shopt -u lithist
+shopt -s cdspell
+shopt -s interactive_comments
 
 ##==
 #
