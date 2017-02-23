@@ -96,7 +96,7 @@ export PS1=$PS1'[\w]'
 
 ##==
 #
-# Shell Options [list options: set]
+# Shell Options [BASH(1): /^shell builtin; /^ +set; list all options: set]
 #
 ##==
 set -o vi
@@ -104,7 +104,7 @@ set -o emacs
 
 ##==
 #
-# Additional Shell Options [list options: shopt -p]
+# Additional Shell Options [BASH(1): /^shell builtin; /^ +shopt; list all options: shopt -p]
 #
 ##==
 shopt -s checkhash
@@ -132,6 +132,13 @@ export HISTTIMEFORMAT='%F %T  '
 export HISTIGNORE='ls:l:ll:ls *"cd:cd[a-z]:cd[a-z][a-z]:cp[a-z][a-z]:pwd:history:'
 export HISTCONTROL=ignoredups
 export HISTSIZE=10000
+
+##==
+#
+# File Pattern Searcher [GREP(1): /^ENVIRONMENT]
+#
+##==
+export GREP_OPTIONS="--color=auto --devices=skip"
 
 ##==
 #
