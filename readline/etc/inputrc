@@ -11,7 +11,7 @@
 ##==
 set completion-ignore-case on
 set completion-query-items 50
-set mark-modified-lines on
+set mark-modified-lines off
 set mark-symlinked-directories on
 set print-completions-horizontally on
 set show-all-if-ambiguous off
