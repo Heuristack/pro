@@ -1,2 +1,62 @@
-"\es":forward-search-history
+##==
+#
+# READLINE [BASH(1): /^READLINE]
+#
+##==
+
+##==
+#
+# Readline Variables
+#
+##==
+set completion-ignore-case on
+set completion-query-items 50
+set mark-modified-lines on
+set mark-symlinked-directories on
+set print-completions-horizontally on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set visible-stats on
+
+##==
+#
+# Readline Commands: Manipulating History
+#
+##==
+"\er": reverse-search-history
+"\es": forward-search-history
+
+##==
+#
+# Quoted Insert
+#
+##==
+"\C-x\"": "\"\"\C-b"
+"\C-x\'": "\'\'\C-b"
+
+##==
+#
+# Transpose chars and words
+#
+##==
+"\C-t": transpose-chars
+"\M-t": transpose-words
+
+##==
+#
+# Numeric Arguments: What!
+#
+##==
+
+##==
+#
+# Insert Comment: (M-#)
+#
+##==
+
+##==
+#
+# Display Shell Version: (C-x C-v)
+#
+##==
 
