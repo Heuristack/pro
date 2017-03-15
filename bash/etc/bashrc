@@ -71,7 +71,7 @@ stty -ixon
 #       11.   directory writable to others, without sticky bit
 ##==
 export CLICOLOR=1
-export LSCOLORS=ExFxcxdxbxegedabagacad
+export LSCOLORS=ExFxcxdxBxegedabagacad
 
 ##==
 #
