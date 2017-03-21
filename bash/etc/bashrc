@@ -149,7 +149,7 @@ alias reload='source $HOME/.bash_profile'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias  l='ls -l'
+alias  l='ls -lT'
 alias ll='ls -lA'
 
 ##==
