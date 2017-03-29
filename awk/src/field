@@ -1,0 +1,60 @@
+#!/usr/bin/awk -f
+#
+# field - print a field.
+#         Written using nawk (Unix/Linux).
+#
+# 14-Aug-2006, ver 0.80
+#
+# USAGE:    field fieldnum [file...]
+#
+#    eg,
+#           ls -l | field 5         # print field 5
+#           field 2 data.txt        # print field 2 from "data.txt"
+#
+# I'm tired of typing awk one-liners to simply print a field. eg, if I
+# wanted to print field 6 from an "ls -l" output,
+#
+#   $ ls -l | awk '{ print $6 }'
+#
+# No problem, you say. But for something used countless times each day,
+# this could be a lot easier to type. With this tool you can use,
+#
+#   $ ls -l | field 5
+#
+# I should have written this a long time ago...
+#
+# COPYRIGHT: Copyright (c) 2006 Brendan Gregg.
+#
+#  This program is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation; either version 2
+#  of the License, or (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software Foundation,
+#  Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#
+#  (http://www.gnu.org/copyleft/gpl.html)
+#
+# 14-Aug-2006    Brendan Gregg     Created this.
+
+BEGIN {
+    if (ARGC < 2) {
+        print "USAGE: field fieldnum [file...]"
+        print "   eg,"
+        print "       ls -l | field 5"
+        exit 1
+    } else {
+        field = ARGV[1]
+        ARGC = 1
+    }
+}
+
+(NF >= field) {
+    print $field
+}

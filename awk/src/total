@@ -1,0 +1,69 @@
+#!/usr/bin/awk -f
+#
+# total - sum a field, and print the total.
+#         Written using nawk (Unix/Linux).
+#
+# 14-Aug-2006, ver 0.80
+#
+# USAGE:    total fieldnum [file...]
+#
+#    eg,
+#           ls -l | total 5         # sum field 5
+#           total 2 data.txt        # sum field 2 from "data.txt"
+#
+# I'm tired of typing awk one-liners to sum fields. eg, if I wanted to sum
+# the file size column from an "ls -l" output,
+#
+#   $ ls -l | awk '{ s += $5 } END { print s }'
+#
+# I wrote this to give my fingers a break. The above can now be run using,
+#
+#   $ ls -l | total 5
+#
+# I should have written this a long time ago...
+#
+# COPYRIGHT: Copyright (c) 2006 Brendan Gregg.
+#
+#  This program is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation; either version 2
+#  of the License, or (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software Foundation,
+#  Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#
+#  (http://www.gnu.org/copyleft/gpl.html)
+#
+# 14-Aug-2006    Brendan Gregg     Created this.
+
+BEGIN {
+    if (ARGC < 2) {
+        print "USAGE: total fieldnum [file...]"
+        print "   eg,"
+        print "       ls -l | total 5"
+	field = -1
+        exit 1
+    } else {
+        field = ARGV[1]
+
+        # drop fieldnum from file list
+        for (i = 1; i < ARGC-1; i++)
+            ARGV[i] = ARGV[i+1]
+        ARGC--
+    }
+}
+
+NF >= field {
+    sum += $field
+}
+
+END {
+    if (field != -1)
+        print sum
+}
