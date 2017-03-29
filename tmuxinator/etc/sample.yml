@@ -1,0 +1,10 @@
+name: sample
+root:
+windows:
+  - dump:
+      layout: even-vertical
+      panes:
+        - tcpdump
+        - tail -f /var/log/system.log
+  - htop: htop
+
