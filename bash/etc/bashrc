@@ -173,8 +173,8 @@ export TM_HOME=$HOME/tmp
 alias cda='cd $AR_HOME'
 alias cdd='cd $DL_HOME'
 alias cdt='cd $TM_HOME'
-alias ard='mkdir -p $AR_HOME/"D$(date +%Y%m%d)"; mv $DL_HOME/* $_'
-alias art='mkdir -p $AR_HOME/"T$(date +%Y%m%d)"; mv $TM_HOME/* $_'
+alias ard='mkdir -p $AR_HOME/"D$(date +%Y%m%d%H%M)"; mv $DL_HOME/* $_'
+alias art='mkdir -p $AR_HOME/"T$(date +%Y%m%d%H%M)"; mv $TM_HOME/* $_'
 
 ##==
 #
