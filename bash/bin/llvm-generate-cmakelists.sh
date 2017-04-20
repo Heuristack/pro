@@ -61,7 +61,7 @@ echo "cmake_minimum_required(VERSION 3.3)"
 echo "project($proj)"
 echo
 
-echo 'set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")'
+echo 'set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")'
 echo "set(CMAKE_INCLUDE_CURRENT_DIR true)"
 echo
 
