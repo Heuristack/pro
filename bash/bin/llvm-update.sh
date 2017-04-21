@@ -3,16 +3,17 @@
 llvmgit="http://llvm.org/git"
 
 cd ~/repositories; pushd . &> /dev/null;
-if [ -d llvm.git ]; then
-    cd llvm.git;
+
+if [ -d llvm ]; then
+    cd llvm;
     echo "Updating llvm ..."
     git pull
     echo ""
 else
     echo "Cloning llvm ..."
-    git clone $llvmgit/llvm.git llvm.git
+    git clone $llvmgit/llvm.git
     echo ""
-    cd llvm.git;
+    cd llvm;
 fi
 
 tools=(clang)
