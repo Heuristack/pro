@@ -1,0 +1,386 @@
+-###
+--analyzer-output <value>
+--analyze
+-arcmt-migrate-emit-errors
+-arcmt-migrate-report-output <value>
+-cl-denorms-are-zero
+-cl-fast-relaxed-math
+-cl-finite-math-only
+-cl-fp32-correctly-rounded-divide-sqrt
+-cl-kernel-arg-info
+-cl-mad-enable
+-cl-no-signed-zeros
+-cl-opt-disable
+-cl-single-precision-constant
+-cl-std=<value>
+-cl-strict-aliasing
+-cl-unsafe-math-optimizations
+--cuda-compile-host-device
+--cuda-device-only
+--cuda-gpu-arch=<value>
+--cuda-host-only
+--cuda-noopt-device-debug
+--cuda-path=<value>
+-cxx-isystem <directory>
+-c
+-dD
+-dependency-dot <value>
+-dependency-file <value>
+-dM
+-emit-ast
+-emit-llvm
+-E
+-faltivec
+-fansi-escape-codes
+-fapinotes-cache-path=<directory>
+-fapinotes-modules
+-fapinotes-swift-version=<version>
+-fapinotes
+-fapple-kext
+-fapple-pragma-pack
+-fapplication-extension
+-fblocks
+-fborland-extensions
+-fbuild-session-file=<file>
+-fbuild-session-timestamp=<time since Epoch in seconds>
+-fcolor-diagnostics
+-fcomment-block-commands=<arg>
+-fcoverage-mapping
+-fcuda-approx-transcendentals
+-fcuda-flush-denormals-to-zero
+-fcxx-exceptions
+-fdata-sections
+-fdebug-prefix-map=<value>
+-fdebug-types-section
+-fdeclspec
+-fdelayed-template-parsing
+-fdiagnostics-parseable-fixits
+-fdiagnostics-print-source-range-info
+-fdiagnostics-show-hotness
+-fdiagnostics-show-note-include-stack
+-fdiagnostics-show-option
+-fdiagnostics-show-template-tree
+-fdollars-in-identifiers
+-fembed-bitcode-marker
+-fembed-bitcode=<option>
+-fembed-bitcode
+-femit-all-decls
+-femulated-tls
+-fexceptions
+-ffast-math
+-ffixed-r9
+-ffixed-x18
+-ffp-contract=<value>
+-ffreestanding
+-ffunction-sections
+-fgnu-keywords
+-fgnu-runtime
+-fgnu89-inline
+-fimplicit-module-maps
+-finline-functions
+-finline-hint-functions
+-finstrument-functions
+-fintegrated-as
+-flto-jobs=<value>
+-flto=<value>
+-flto
+-fmath-errno
+-fmax-type-align=<value>
+-fmodule-file=<file>
+-fmodule-map-file=<file>
+-fmodule-name=<name>
+-fmodules-cache-path=<directory>
+-fmodules-decluse
+-fmodules-disable-diagnostic-validation
+-fmodules-ignore-macro=<value>
+-fmodules-prune-after=<seconds>
+-fmodules-prune-interval=<seconds>
+-fmodules-search-all
+-fmodules-strict-decluse
+-fmodules-user-build-path <directory>
+-fmodules-validate-once-per-build-session
+-fmodules-validate-system-headers
+-fmodules
+-fms-compatibility-version=<value>
+-fms-compatibility
+-fms-extensions
+-fmsc-version=<value>
+-fno-access-control
+-fno-apinotes-modules
+-fno-apinotes
+-fno-assume-sane-operator-new
+-fno-autolink
+-fno-builtin-<value>
+-fno-builtin
+-fno-common
+-fno-constant-cfstrings
+-fno-coverage-mapping
+-fno-declspec
+-fno-diagnostics-fixit-info
+-fno-dollars-in-identifiers
+-fno-elide-constructors
+-fno-elide-type
+-fno-gnu-inline-asm
+-fno-integrated-as
+-fno-jump-tables
+-fno-lax-vector-conversions
+-fno-lto
+-fno-merge-all-constants
+-fno-objc-infer-related-result-type
+-fno-operator-names
+-fno-preserve-as-comments
+-fno-profile-generate
+-fno-profile-instr-generate
+-fno-profile-instr-use
+-fno-reroll-loops
+-fno-rtti
+-fno-sanitize-blacklist
+-fno-sanitize-cfi-cross-dso
+-fno-sanitize-coverage=<value>
+-fno-sanitize-memory-track-origins
+-fno-sanitize-recover=<value>
+-fno-sanitize-stats
+-fno-sanitize-trap=<value>
+-fno-short-wchar
+-fno-show-column
+-fno-show-source-location
+-fno-signed-char
+-fno-signed-zeros
+-fno-spell-checking
+-fno-stack-protector
+-fno-standalone-debug
+-fno-threadsafe-statics
+-fno-trigraphs
+-fno-unroll-loops
+-fno-use-cxa-atexit
+-fno-use-init-array
+-fobjc-arc-exceptions
+-fobjc-arc
+-fobjc-exceptions
+-fobjc-gc-only
+-fobjc-gc
+-fobjc-runtime=<value>
+-fobjc-weak
+-fopenmp-targets=<value>
+-foptimization-record-file=<value>
+-fpack-struct=<value>
+-fpascal-strings
+-fpcc-struct-return
+-fplugin=<dsopath>
+-fprebuilt-module-path=<directory>
+-fprofile-generate=<directory>
+-fprofile-generate
+-fprofile-instr-generate=<file>
+-fprofile-instr-generate
+-fprofile-instr-use=<value>
+-fprofile-sample-use=<value>
+-fprofile-use=<pathname>
+-freciprocal-math
+-freg-struct-return
+-freroll-loops
+-fsanitize-address-field-padding=<value>
+-fsanitize-address-use-after-scope
+-fsanitize-blacklist=<value>
+-fsanitize-cfi-cross-dso
+-fsanitize-coverage=<value>
+-fsanitize-memory-track-origins=<value>
+-fsanitize-memory-track-origins
+-fsanitize-memory-use-after-dtor
+-fsanitize-recover=<value>
+-fsanitize-stats
+-fsanitize-trap=<value>
+-fsanitize-undefined-strip-path-components=<number>
+-fsanitize=<check>
+-fsave-optimization-record
+-fshort-enums
+-fshort-wchar
+-fshow-overloads=<value>
+-fsized-deallocation
+-fsjlj-exceptions
+-fslp-vectorize-aggressive
+-fslp-vectorize
+-fstack-protector-all
+-fstack-protector-strong
+-fstack-protector
+-fstandalone-debug
+-fstrict-enums
+-fstrict-vtable-pointers
+-fthinlto-index=<value>
+-ftrap-function=<value>
+-ftrapv-handler=<function name>
+-ftrapv
+-ftrigraphs
+-funique-section-names
+-funroll-loops
+-fuse-init-array
+-fveclib=<value>
+-fvectorize
+-fvisibility-inlines-hidden
+-fvisibility-ms-compat
+-fvisibility=<value>
+-fwhole-program-vtables
+-fwrapv
+-fwritable-strings
+-fxray-instruction-threshold= <value>
+-fxray-instrument
+-fzvector
+-F <value>
+--gcc-toolchain=<value>
+-gcodeview
+-gdwarf-2
+-gdwarf-3
+-gdwarf-4
+-gdwarf-5
+-gline-tables-only
+-gmodules
+-g
+-help
+-H
+-iapinotes-modules <directory>
+-idirafter <value>
+-iframework <value>
+-imacros <file>
+-include-pch <file>
+-include <file>
+-index-header-map
+-index-ignore-system-symbols
+-index-record-codegen-name
+-index-store-path <value>
+-iprefix <dir>
+-iquote <directory>
+-isysroot <dir>
+-isystem-after <directory>
+-isystem <directory>
+-ivfsoverlay <value>
+-iwithprefixbefore <dir>
+-iwithprefix <dir>
+-iwithsysroot <directory>
+-I <value>
+-mabicalls
+-malign-double
+-mbackchain
+-mcrc
+-MD
+-meabi <value>
+-mfix-cortex-a53-835769
+-mfp32
+-mfp64
+-MF <file>
+-mgeneral-regs-only
+-mglobal-merge
+-MG
+-mhvx-double
+-mhvx
+-miamcu
+--migrate
+-mincremental-linker-compatible
+-mios-version-min=<value>
+-mllvm <value>
+-mlong-calls
+-mmacosx-version-min=<value>
+-MMD
+-mms-bitfields
+-mmsa
+-MM
+-mno-abicalls
+-mno-fix-cortex-a53-835769
+-mno-global-merge
+-mno-hvx-double
+-mno-hvx
+-mno-implicit-float
+-mno-incremental-linker-compatible
+-mno-long-calls
+-mno-movt
+-mno-ms-bitfields
+-mno-msa
+-mno-restrict-it
+-mno-unaligned-access
+-mnocrc
+-module-dependency-dir <value>
+-momit-leaf-frame-pointer
+-MP
+-mqdsp6-compat
+-MQ <value>
+-mrelax-all
+-mrestrict-it
+-mrtd
+-msoft-float
+-mstack-alignment=<value>
+-mstack-probe-size=<value>
+-mstackrealign
+-mthread-model <value>
+-MT <value>
+-munaligned-access
+-MV
+-M
+--no-cuda-version-check
+--no-system-header-prefix=<prefix>
+-nobuiltininc
+-nostdinc++
+-ObjC++
+-objcmt-atomic-property
+-objcmt-migrate-all
+-objcmt-migrate-annotation
+-objcmt-migrate-designated-init
+-objcmt-migrate-instancetype
+-objcmt-migrate-literals
+-objcmt-migrate-ns-macros
+-objcmt-migrate-property-dot-syntax
+-objcmt-migrate-property
+-objcmt-migrate-protocol-conformance
+-objcmt-migrate-readonly-property
+-objcmt-migrate-readwrite-property
+-objcmt-migrate-subscripting
+-objcmt-ns-nonatomic-iosonly
+-objcmt-returns-innerpointer-property
+-objcmt-whitelist-dir-path=<value>
+-ObjC
+-o <file>
+-pg
+-pipe
+-print-file-name=<file>
+-print-ivar-layout
+-print-libgcc-file-name
+-print-prog-name=<name>
+-print-search-dirs
+-pthread
+-P
+-Qunused-arguments
+-relocatable-pch
+-rewrite-legacy-objc
+-rewrite-objc
+-Rpass-analysis=<value>
+-Rpass-missed=<value>
+-Rpass=<value>
+-R<remark>
+-save-stats=<value>
+-save-stats
+-save-temps=<value>
+-save-temps
+-serialize-diagnostics <value>
+-std=<value>
+-stdlib=<value>
+--system-header-prefix=<prefix>
+-S
+--target=<value>
+-time
+-traditional-cpp
+-trigraphs
+-undef
+--verify-debug-info
+-verify-pch
+-v
+-Wa,<arg>
+-Wl,<arg>
+-working-directory <value>
+-Wp,<arg>
+-W<warning>
+-w
+-Xanalyzer <arg>
+-Xassembler <arg>
+-Xclang <arg>
+-Xcuda-fatbinary <arg>
+-Xcuda-ptxas <arg>
+-Xlinker <arg>
+-Xpreprocessor <arg>
+-x <language>

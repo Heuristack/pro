@@ -1,0 +1,91 @@
+Address Of 
+Algebraic Hierarchy 
+Attach by Initialization 
+Attorney-Client 
+Barton-Nackman trick 
+Base-from-Member 
+Boost mutant 
+Calling Virtuals During Initialization 
+Capability Query 
+Checked delete 
+Clear-and-minimize 
+Coercion by Member Template 
+Computational Constructor 
+Concrete Data Type 
+Construct On First Use 
+Construction Tracker 
+Copy-and-swap 
+Copy-on-write 
+Intrusive reference counting (Counted Body) 
+Covariant Return Types 
+Curiously Recurring Template Pattern (CRTP) 
+Empty Base Optimization (EBO) 
+enable-if 
+Erase-Remove 
+Execute-Around Pointer 
+Exploding Return Type 
+Export Guard Macro 
+Expression-template 
+Fake Vtable 
+Fast Pimpl 
+Final Class 
+Free Function Allocators
+Function Object 
+Generic Container Idioms 
+Hierarchy Generation 
+Include Guard Macro 
+Inline Guard Macro 
+Inner Class 
+Int-To-Type 
+Interface Class 
+Iterator Pair 
+Making New Friends 
+Metafunction 
+Move Constructor 
+Multi-statement Macro 
+Member Detector 
+Named Constructor 
+Named External Argument 
+Named Loop (labeled loop) 
+Named Parameter 
+Named Template Parameters 
+Nifty Counter (Schwarz Counter) 
+Non-copyable Mixin 
+Non-member Non-friend Function 
+Non-throwing swap 
+Non-Virtual Interface (NVI, Public Overloaded Non-Virtuals Call Protected Non-Overloaded Virtuals) 
+nullptr 
+Object Generator 
+Object Template 
+Parameterized Base Class (Parameterized Inheritance) 
+Pimpl (Handle Body, Compilation Firewall, Cheshire Cat) 
+Policy Clone (Metafunction wrapper) 
+Policy-based Design 
+Polymorphic Exception 
+Polymorphic Value Types 
+Recursive Type Composition 
+Requiring or Prohibiting Heap-based Objects
+Resource Acquisition Is Initialization (RAII, Execute-Around Object, Scoped Locking) 
+Resource Return 
+Return Type Resolver 
+Runtime Static Initialization Order Idioms 
+Safe bool 
+Scope Guard 
+Substitution Failure Is Not An Error (SFINAE) 
+Shortening Long Template Names 
+Shrink-to-fit 
+Small Object Optimization 
+Smart Pointer 
+Storage Class Tracker 
+Tag Dispatching 
+Temporary Base Class 
+Temporary Proxy 
+The result_of technique 
+Thin Template 
+Traits 
+Type Erasure 
+Type Generator (Templated Typedef) 
+Type Safe Enum 
+Type Selection 
+Virtual Constructor 
+Virtual Friend Function 
