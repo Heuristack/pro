@@ -31,3 +31,6 @@ se nowrap
 ":h autocmd
 au BufWritePre * %s/\s\+$//e
 
+":h noswapfile
+se noswapfile
+
