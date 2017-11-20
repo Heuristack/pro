@@ -12,6 +12,7 @@ C89 = clang -std=c89
 C99 = clang -std=c99
 CPP = clang++ -std=c++1z -stdlib=libc++
 WRN = -Weverything
+WRN =
 endif
 
 CFLAGS = $(WRN)
