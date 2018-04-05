@@ -11,11 +11,21 @@ ifeq ($(OS), Darwin)
 C89 = clang -std=c89
 C99 = clang -std=c99
 CPP = clang++ -std=c++1z -stdlib=libc++
-WRN = -Weverything
-WRN =
 endif
 
-CFLAGS = $(WRN)
+ifdef WARN
+WARN = -Weverything
+else
+WARN =
+endif
+
+ifdef CATCH
+CATCH = -DCATCH_CONFIG_MAIN
+else
+CATCH =
+endif
+
+CFLAGS = $(WARN) $(CATCH)
 
 INC =
 LIB =
