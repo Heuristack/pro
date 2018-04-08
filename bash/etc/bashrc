@@ -129,7 +129,7 @@ export EDITOR=vim
 #
 ##==
 export HISTTIMEFORMAT='%F %T  '
-export HISTIGNORE='ls:l:ll:ls *"cd:cd[a-z]:cd[a-z][a-z]:cp[a-z][a-z]:pwd:history:'
+export HISTIGNORE='pwd:ls:l:ll:cd:'
 export HISTCONTROL=ignoredups
 export HISTSIZE=10000
 
