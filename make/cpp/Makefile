@@ -25,7 +25,13 @@ else
 CATCH =
 endif
 
-CFLAGS = $(WARN) $(CATCH)
+ifdef TEST
+TEST = -DENTRY
+else
+TEST =
+endif
+
+CFLAGS = $(WARN) $(CATCH) $(TEST)
 
 INC =
 LIB =
