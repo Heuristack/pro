@@ -151,7 +151,8 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias  l='ls -lT'
 alias ll='ls -lA'
-alias mk='make --makefile=$HOME/.makefile --environment-overrides'
+alias mk='make --makefile=$HOME/.makefile'
+alias me='make --makefile=$HOME/.makefile --environment-overrides'
 
 ##==
 #
