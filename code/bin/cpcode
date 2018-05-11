@@ -1,0 +1,5 @@
+#!/bin/bash
+CODEHOME=$HOME/pro/code
+N=$1
+cp $CODEHOME/src/main${N:-0}.cpp main.cpp
+
