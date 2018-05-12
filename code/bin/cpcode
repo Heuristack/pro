@@ -1,5 +1,8 @@
 #!/bin/bash
 CODEHOME=$HOME/pro/code
 N=$1
-cp $CODEHOME/src/main${N:-0}.cpp main.cpp
+hpp=$CODEHOME/src/main${N:-0}.hpp
+[ -f $hpp ] && cp $hpp main.hpp
+cpp=$CODEHOME/src/main${N:-0}.cpp
+[ -f $cpp ] && cp $cpp main.cpp
 
