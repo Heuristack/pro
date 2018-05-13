@@ -7,13 +7,14 @@
 
 using namespace std;
 
-int solution()
+int solution(vector<int> & A)
 {
     return 0;
 }
 
 int main()
 {
-    cout << solution() << endl;
+    vector<int> A = {};
+    cout << solution(A) << endl;
 }
 
