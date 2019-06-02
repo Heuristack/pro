@@ -191,7 +191,7 @@ alias art='mkdir -p $AR_HOME/"T$(date +%Y%m%d%H%M)"; mv $TM_HOME/* $_'
 # Extension: Load (source) bash configurations accordingly
 #
 ##==
-[ -r ~/.bashrc ] && . ~/.bashrc
+[ "${OS}" != "Linux" ] && [ -r ~/.bashrc ] && . ~/.bashrc
 
 ##===----------------------------------------------------------------------===##
 
