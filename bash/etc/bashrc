@@ -138,7 +138,13 @@ export HISTSIZE=10000
 # File Pattern Searcher [GREP(1): /^ENVIRONMENT]
 #
 ##==
-export GREP_OPTIONS="--color=auto --devices=skip"
+GREP_OPTIONS="--color=auto --devices=skip"
+if [ "${OS}" != "Linux" ]
+then
+    export GREP_OPTIONS
+else
+    alias grep='grep ${GREP_OPTIONS}'
+fi
 
 ##==
 #
