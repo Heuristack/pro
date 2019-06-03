@@ -70,8 +70,11 @@ stty -ixon
 #       10.   directory writable to others, with sticky bit
 #       11.   directory writable to others, without sticky bit
 ##==
+if [ "${OS}" == "Darwin" ]
+then
 export CLICOLOR=1
 export LSCOLORS=ExFxcxdxBxegedabagacad
+fi
 
 ##==
 #
@@ -86,6 +89,8 @@ export LC_ALL=$LANG
 # Prompting String [BASH(1): /^PROMPTING]
 #
 ##==
+if [ "${OS}" == "Darwin" ]
+then
 export PS1=$PS1'[${HOSTNAME}]'
 export PS1=$PS1'[${USER}]'
 export PS1=$PS1'[${PWD}]'
@@ -93,6 +98,7 @@ export PS1=$PS1'[$(date +%Y-%m-%d)]'
 export PS1=''
 export PS1=$PS1'[$(date +%H:%M:%S)]'
 export PS1=$PS1'[\W]'
+fi
 
 ##==
 #
