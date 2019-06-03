@@ -161,7 +161,12 @@ alias reload='source $HOME/.bash_profile'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias  l='ls -lT'
+if [ "${OS}" != "Linux" ]
+then
+    alias  l='ls -lT'
+else
+    alias  l='ls -l'
+fi
 alias ll='ls -lA'
 alias mk='make --makefile=$HOME/.makefile'
 alias me='make --makefile=$HOME/.makefile --environment-overrides'
