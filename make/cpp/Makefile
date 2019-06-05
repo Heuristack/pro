@@ -10,7 +10,11 @@ OS = $(shell uname)
 ifeq ($(OS), Darwin)
 C89 = clang -std=c89
 C99 = clang -std=c99
-CPP = clang++ -std=c++1z -stdlib=libc++
+CPP = clang++ -std=c++17 -stdlib=libc++
+else
+C89 = gcc -std=c89
+C99 = gcc -std=c99
+CPP = g++ -std=c++17
 endif
 
 ifdef WARN
