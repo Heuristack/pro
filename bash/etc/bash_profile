@@ -200,6 +200,7 @@ alias art='mkdir -p $AR_HOME/"T$(date +%Y%m%d%H%M)"; mv $TM_HOME/* $_'
 # PATH and DYLD_LIBRARY_PATH
 #
 ##==
+_PATH=$_PATH:$HOME/pro/bash/bin
 [ "${_PATH-no}" != "no" ] && export PATH=$PATH:$_PATH
 [ "${_DYLD_LIBRARY_PATH-no}" != "no" ] && export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$_DYLD_LIBRARY_PATH
 
