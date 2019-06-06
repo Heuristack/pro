@@ -2,4 +2,5 @@ alias cdprog='cd ~/repositories/programming'
 alias cdalgo='cd ~/repositories/algo'
 alias cdpro='cd ~/pro'
 alias note='vim ~/repositories/programming/note/note.md'
+alias week='date +%V'
 
