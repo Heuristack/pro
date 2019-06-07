@@ -23,7 +23,7 @@ sy on
 se gp=grep\ --color=always\ -n\ $*\ /dev/null
 
 ":h laststatus
-se ls=0
+se ls=1
 
 ":h wrap
 se nowrap
