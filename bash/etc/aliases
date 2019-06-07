@@ -1,6 +1,9 @@
-alias cdprog='cd ~/repositories/programming'
-alias cdalgo='cd ~/repositories/algo'
 alias cdpro='cd ~/pro'
 alias cdbin='cd ~/pro/bash/bin'
+
+alias cdtodo='cd ~/pro/todo'
+alias cdalgo='cd ~/repositories/algo'
+alias cdprog='cd ~/repositories/programming'
+
 alias week='date +%V'
 
