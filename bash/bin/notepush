@@ -1,0 +1,12 @@
+#!/bin/bash
+
+weekday=$(date +%a-%V-%y)
+message=${1:-"note update automatic commit and push on ${weekday}"}
+
+cd ~/pro
+git status
+git add README.md
+git commit -m "pro: ${message} [note]"
+git push
+cd
+
