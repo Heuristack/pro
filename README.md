@@ -4,6 +4,8 @@ Week 23
 - [x] Install Anki on Ubuntu
 
 Clear terminal by reinitialization
+-----
+
 ```bash
 tput reset
 ```
