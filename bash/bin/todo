@@ -1,0 +1,71 @@
+#!/bin/bash
+
+progname=$(basename ${0})
+weekday=$(date +%V%a)
+directory="${HOME}/pro/todo"
+file="${directory}/${weekday}.md"
+
+function usage()
+{
+    echo "${progname} "
+}
+
+function show_all_files()
+{
+    cat ${directory}/*.md
+}
+
+function create_file_if_not_exist()
+{
+    if [ ! -f ${file} ]
+    then
+        echo "${weekday}: " >> ${file}
+    fi
+}
+
+function edit_file()
+{
+    vim ${file} +2
+}
+
+function show_file()
+{
+    cat ${file}
+}
+
+function push_file()
+{
+    cd ${directory}
+    git status
+    git add ${file}
+    git commit -m "pro: todo update automatic commit and push at $(date +%a-%V-%y) [todo]"
+    git push
+    cd
+}
+
+
+function main()
+{
+    case ${1} in
+    -h|--help)
+        usage
+        ;;
+    -p|--push)
+        push_file
+        ;;
+    -c|--cat)
+        show_all_files
+        ;;
+    -e|--edit)
+        create_file_if_not_exist
+        edit_file
+        ;;
+    -s|--show|*)
+        create_file_if_not_exist
+        show_file
+        ;;
+    esac
+}
+
+main "${@}"
+
