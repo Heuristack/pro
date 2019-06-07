@@ -1,9 +1,11 @@
 #!/bin/bash
 
+date=$(date +%V%a)
 progname=$(basename ${0})
-weekday=$(date +%V%a)
 directory="${HOME}/pro/todo"
-file="${directory}/${weekday}.md"
+file="${directory}/${date}.md"
+datecommit=$(date +%a-%V-%y)
+message="update automatic commit and push at ${datecommit}"
 
 function usage()
 {
@@ -17,15 +19,19 @@ function show_all_files()
 
 function create_file_if_not_exist()
 {
-    if [ ! -f ${file} ]
+    F=${1:-${file}}
+    D=${2:-${date}}
+    if [ ! -f ${F} ]
     then
-        echo "${weekday}: " >> ${file}
+        echo "${D} " >> ${F}
+        echo "-----" >> ${F}
+        echo ""      >> ${F}
     fi
 }
 
 function edit_file()
 {
-    vim ${file} +2
+    vim ${file} +
 }
 
 function show_file()
@@ -37,12 +43,22 @@ function push_file()
 {
     cd ${directory}
     git status
-    git add ${file}
-    git commit -m "pro: todo update automatic commit and push at $(date +%a-%V-%y) [todo]"
+    git add *
+    git commit -m "pro: ${message} [todo]"
     git push
     cd
 }
 
+function edit_file_ytt()
+{
+    date_yes=$(date -d '1 day ago' +%V%a)
+    date_tmr=$(date -d '1 day    ' +%V%a)
+    file_yes=${directory}/${date_yes}.md
+    file_tmr=${directory}/${date_tmr}.md
+    create_file_if_not_exist ${file_yes} ${date_yes}
+    create_file_if_not_exist ${file_tmr} ${date_tmr}
+    vim -o ${file_yes} ${file} ${file_tmr}
+}
 
 function main()
 {
@@ -59,6 +75,9 @@ function main()
     -e|--edit)
         create_file_if_not_exist
         edit_file
+        ;;
+    -m|--more)
+        edit_file_ytt
         ;;
     -s|--show|*)
         create_file_if_not_exist
