@@ -5,7 +5,7 @@ progname=$(basename ${0})
 directory="${HOME}/pro/todo"
 file="${directory}/${date}.md"
 datecommit=$(date +%a-%V-%y)
-message="update automatic commit and push at ${datecommit}"
+message="update automatic commit and push on ${datecommit}"
 
 function usage()
 {
