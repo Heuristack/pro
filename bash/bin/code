@@ -1,0 +1,132 @@
+#!/bin/bash
+
+date=$(date +%y%j)
+progname=$(basename ${0})
+dir="${HOME}/code"
+file="${date}.cpp"
+compiler="g++ -std=c++17"
+programmingdir="${HOME}/repositories/programming"
+readmefile="README.md"
+
+
+function usage()
+{
+    echo "${progname} "
+}
+
+function create_file_if_not_exist()
+{
+    cd ${dir}
+    if [ ! -f ${file} ]
+    then
+        touch ${file}
+    fi
+}
+
+function edit_file()
+{
+    cd ${dir}
+    vim ${file}
+}
+
+function compile()
+{
+    cd ${dir}
+    ${compiler} ${file}
+}
+
+function run()
+{
+    cd ${dir}
+    if [ -f a.out ]
+    then
+        ./a.out
+    fi
+}
+
+function commit()
+{
+    message=${1:-"Code on ${date}"}
+
+    cd ${programmingdir}
+    git status
+    git stash save
+
+    cd ${dir}
+    tmp=${date}.txt
+    rm -f ${tmp}
+    echo ${message}     >> ${tmp}
+    for (( i=0; i<${#message}; i++ ))
+    do
+        underline="${underline}-"
+    done
+    echo ${underline}   >> ${tmp}
+    echo "\`\`\`C++"    >> ${tmp}
+    cat ${file}         >> ${tmp}
+    echo "\`\`\`"       >> ${tmp}
+    echo ""             >> ${tmp}
+
+    cd ${programmingdir}
+    cat ${readmefile} >> ${dir}/${tmp}
+    cp ${dir}/${tmp} ${readmefile}
+    git add ${readmefile}
+    git commit -m "${message}"
+    git stash clear
+    git status
+}
+
+function push()
+{
+    cd ${programmingdir}
+    git status
+    git push
+    git status
+}
+
+function reset()
+{
+    cd ${programmingdir}
+    git status
+    git reset --hard HEAD^
+    git status
+}
+
+function recovery()
+{
+    cd ${programmingdir}
+    git status
+    git pull
+    git status
+}
+
+function main()
+{
+    case ${1} in
+    -h|--help)
+        usage
+        ;;
+    -c|--commit)
+        commit "${2}"
+        ;;
+    -p|--push)
+        push
+        ;;
+    --reset)
+        reset
+        ;;
+    --recovery)
+        recovery
+        ;;
+    -r|--run)
+        compile
+        run
+        ;;
+    -e|--edit|*)
+        create_file_if_not_exist
+        edit_file
+        ;;
+    esac
+}
+
+main "${@}"
+
