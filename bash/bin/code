@@ -91,7 +91,7 @@ function reset()
     git status
 }
 
-function recovery()
+function recover()
 {
     cd ${programmingdir}
     git status
@@ -114,8 +114,8 @@ function main()
     --reset)
         reset
         ;;
-    --recovery)
-        recovery
+    --recover)
+        recover
         ;;
     -r|--run)
         compile
