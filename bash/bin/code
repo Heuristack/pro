@@ -11,7 +11,7 @@ readmefile="README.md"
 
 function usage()
 {
-    echo "${progname} "
+    echo "${progname} [-h|--help]|[-c|--commit <message>]|[-p|--push]|[--reset]|[--recover]|[-r|--run]|[-e|--edit|*]"
 }
 
 function create_file_if_not_exist()
@@ -70,7 +70,7 @@ function commit()
     cat ${readmefile} >> ${dir}/${tmp}
     cp ${dir}/${tmp} ${readmefile}
     git add ${readmefile}
-    git commit -m "${message}"
+    git commit -m "programming: ${message} [C++]"
     git stash clear
     git status
 }
