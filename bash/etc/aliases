@@ -4,6 +4,7 @@ alias cdbin='cd ~/pro/bash/bin'
 alias cdtodo='cd ~/pro/todo'
 alias cdalgo='cd ~/repositories/algo'
 alias cdprog='cd ~/repositories/programming'
+alias cdcode='cd ~/code'
 
 alias week='date +%V'
 
