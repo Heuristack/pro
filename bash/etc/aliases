@@ -1,5 +1,6 @@
 alias cdpro='cd ~/pro'
 alias cdbin='cd ~/pro/bash/bin'
+alias cdapp='cd ~/Applications'
 
 alias cdtodo='cd ~/pro/todo'
 alias cdalgo='cd ~/repositories/algo'
