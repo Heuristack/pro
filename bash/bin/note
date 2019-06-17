@@ -33,18 +33,19 @@ function push_file()
 
 function main()
 {
-    case ${1} in
+    action="${1:-"-e"}"
+    case ${action} in
     -h|--help)
         usage
-        ;;
-    -p|--push)
-        push_file
         ;;
     -s|--show|-c|--cat)
         show_file
         ;;
-    -e|--edit|*)
+    -e|--edit)
         edit_file
+        ;;
+    -p|--push)
+        push_file
         ;;
     esac
 }

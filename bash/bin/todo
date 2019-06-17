@@ -62,12 +62,14 @@ function edit_file_ytt()
 
 function main()
 {
-    case ${1} in
+    action="${1:-"-s"}"
+    case ${action} in
     -h|--help)
         usage
         ;;
-    -p|--push)
-        push_file
+    -s|--show)
+        create_file_if_not_exist
+        show_file
         ;;
     -c|--cat)
         show_all_files
@@ -79,9 +81,8 @@ function main()
     -m|--more)
         edit_file_ytt
         ;;
-    -s|--show|*)
-        create_file_if_not_exist
-        show_file
+    -p|--push)
+        push_file
         ;;
     esac
 }

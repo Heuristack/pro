@@ -8,7 +8,6 @@ compiler="g++ -std=c++17"
 programmingdir="${HOME}/repositories/programming"
 readmefile="README.md"
 
-
 function usage()
 {
     echo "${progname} [-h|--help]|[-c|--commit <message>]|[-p|--push]|[--reset]|[--recover]|[-r|--run]|[-e|--edit|*]"
@@ -99,11 +98,25 @@ function recover()
     git status
 }
 
+function link()
+{
+    ln -sfn "${dir}/${file}" "${HOME}/projects/HelloWorld/main.cpp"
+}
+
 function main()
 {
-    case ${1} in
+    action="${1:-"-e"}"
+    case ${action} in
     -h|--help)
         usage
+        ;;
+    -e|--edit)
+        create_file_if_not_exist
+        edit_file
+        ;;
+    -r|--run)
+        compile
+        run
         ;;
     -c|--commit)
         commit "${2}"
@@ -117,13 +130,8 @@ function main()
     --recover)
         recover
         ;;
-    -r|--run)
-        compile
-        run
-        ;;
-    -e|--edit|*)
-        create_file_if_not_exist
-        edit_file
+    -l|--link)
+        link
         ;;
     esac
 }
