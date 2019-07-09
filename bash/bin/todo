@@ -79,6 +79,11 @@ function main()
         edit_file
         ;;
     -m|--more)
+        if [ "$(uname)" == "Darwin" ]
+        then
+            echo "Option '-m' is NOT supported on Mac"
+            exit
+        fi
         edit_file_ytt
         ;;
     -p|--push)
