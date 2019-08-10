@@ -1,24 +1,34 @@
 #!/bin/bash
 
-date=$(date +%y%j)
+date=$(date "+%Y%m%d%H%M")
 progname=$(basename ${0})
 dir="${HOME}/code"
-file="${date}.cpp"
+file=$(ls -tr ${dir} | grep '.cpp' | tail -1)
+newfile="${date}.cpp"
 compiler="g++ -std=c++17"
 programmingdir="${HOME}/repositories/programming"
 readmefile="README.md"
 
 function usage()
 {
-    echo "${progname} [-h|--help]|[-c|--commit <message>]|[-p|--push]|[--reset]|[--recover]|[-r|--run]|[-e|--edit|*]"
+    echo "code [-h|--help]"
+    echo "     [-n|--new]"
+    echo "     [-e|--edit]"
+    echo "     [-s|--show]"
+    echo "     [-r|--run]"
+    echo "     [-l|--link]"
+    echo "     [-c|--commit <message>]"
+    echo "     [-p|--push]"
+    echo "     [--reset]"
+    echo "     [--recover]"
 }
 
 function create_file_if_not_exist()
 {
     cd ${dir}
-    if [ ! -f ${file} ]
+    if [ ! -f ${newfile} ]
     then
-        touch ${file}
+        touch ${newfile}
     fi
 }
 
@@ -26,6 +36,12 @@ function edit_file()
 {
     cd ${dir}
     vim ${file}
+}
+
+function show_file()
+{
+    cd ${dir}
+    cat ${file}
 }
 
 function compile()
@@ -41,6 +57,11 @@ function run()
     then
         ./a.out
     fi
+}
+
+function link()
+{
+    ln -sfn "${dir}/${file}" "${HOME}/projects/HelloWorld/main.cpp"
 }
 
 function commit()
@@ -98,11 +119,6 @@ function recover()
     git status
 }
 
-function link()
-{
-    ln -sfn "${dir}/${file}" "${HOME}/projects/HelloWorld/main.cpp"
-}
-
 function main()
 {
     action="${1:-"-e"}"
@@ -110,13 +126,21 @@ function main()
     -h|--help)
         usage
         ;;
-    -e|--edit)
+    -n|--new)
         create_file_if_not_exist
+        ;;
+    -e|--edit)
         edit_file
+        ;;
+    -s|--show)
+        show_file
         ;;
     -r|--run)
         compile
         run
+        ;;
+    -l|--link)
+        link
         ;;
     -c|--commit)
         commit "${2}"
@@ -129,9 +153,6 @@ function main()
         ;;
     --recover)
         recover
-        ;;
-    -l|--link)
-        link
         ;;
     esac
 }
