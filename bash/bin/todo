@@ -92,5 +92,6 @@ function main()
     esac
 }
 
+exit
 main "${@}"
 
