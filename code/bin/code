@@ -19,8 +19,8 @@ function usage()
     echo "     [-l|--link]"
     echo "     [-c|--commit <message>]"
     echo "     [-p|--push]"
-    echo "     [--reset]"
-    echo "     [--recover]"
+    echo "     [   --reset]"
+    echo "     [   --recover]"
 }
 
 function create_file_if_not_exist()

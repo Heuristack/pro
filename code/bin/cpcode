@@ -1,9 +1,59 @@
 #!/bin/bash
-CODEHOME=$HOME/pro/code
-N=$1
-NAME=$2
-hpp=$CODEHOME/src/main${N:-0}.hpp
-[ -f $hpp ] && cp $hpp ${NAME:-main}.hpp
-cpp=$CODEHOME/src/main${N:-0}.cpp
-[ -f $cpp ] && cp $cpp ${NAME:-main}.cpp
+
+codehome=$HOME/pro/code
+
+function usage()
+{
+    echo "cpcode -h|-d|-f source-template-num(0) target-name(1)"
+}
+
+function copy_code()
+{
+    num="${1:-0}"
+    nam="${2:-main}"
+
+    hpp=$codehome/src/main${num}.hpp
+    cpp=$codehome/src/main${num}.cpp
+
+    if [ -f $hpp ]
+    then
+        cp $hpp ${nam}.hpp
+    fi
+
+    if [ -f $cpp ]
+    then
+        cp $cpp ${nam}.cpp
+    fi
+}
+
+function make_code_space()
+{
+    num="${1:-0}"
+    dir="${2:-1}"
+    if [ ! -d $dir ]
+    then
+        mkdir $dir
+    fi
+    cd $dir
+    copy_code ${num}
+}
+
+function main()
+{
+    action="${1:-"-e"}"
+    shift
+    case ${action} in
+    -h)
+        usage
+        ;;
+    -f)
+        copy_code "${@}"
+        ;;
+    -d)
+        make_code_space "${@}"
+        ;;
+    esac
+}
+
+main "${@}"
 

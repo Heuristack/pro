@@ -1,7 +1,0 @@
-#!/bin/bash
-DIR=${1:-1}
-mkdir $DIR
-cd $DIR
-cpcode 1
-cd -
-
