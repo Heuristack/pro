@@ -4,7 +4,7 @@ codehome=$HOME/pro/code
 
 function usage()
 {
-    echo "cpcode -h|-d|-f source-template-num(0) target-name(1)"
+    echo "cpcd -h|-d|-f source-template-num(0) target-name(1)"
 }
 
 function copy_code()
