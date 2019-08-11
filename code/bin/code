@@ -61,7 +61,7 @@ function run()
 
 function link()
 {
-    ln -sfn "${dir}/${file}" "${HOME}/projects/HelloWorld/main.cpp"
+    ln -sfn "${dir}/${file}" "${HOME}/projects/playground.clion/main.cpp"
 }
 
 function commit()
