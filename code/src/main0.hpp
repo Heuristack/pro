@@ -1,5 +1,5 @@
-#ifndef MAIN0
-#define MAIN0
+#ifndef MAIN
+#define MAIN
 
 #include <iostream>
 #include <vector>
@@ -29,20 +29,30 @@
 
 using namespace std;
 
+auto print_message(string const & object = "", string const & content = "") -> void
+{
+    string message(200,0);
+    snprintf(message.data(), message.size(),
+            "%9s: %s", object.data(), content.data());
+    cout << message << endl;
+}
+
 template <typename T = double>
-class ScopeTimer
+class scoped_timer
 {
 public:
-    ScopeTimer()
+    scoped_timer()
     {
         b = c.now();
     }
 
-   ~ScopeTimer()
+   ~scoped_timer()
     {
         e = c.now();
         d = e - b;
-        cout << setprecision(9) << fixed << d.count() << endl;
+        stringstream s;
+        s << setprecision(9) << fixed << d.count();
+        print_message("time", s.str());
     }
 
 private:
@@ -50,6 +60,7 @@ private:
     chrono::duration<T> d;
     chrono::time_point<decltype(c),decltype(d)> b,e;
 };
+
 
 #endif
 

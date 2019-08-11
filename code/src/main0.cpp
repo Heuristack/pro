@@ -1,7 +1,7 @@
 #include "main.hpp"
+
 int main()
 {
-    ScopeTimer<double> ST;
-
+    scoped_timer<double> timer;
 }
 
