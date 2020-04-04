@@ -8,6 +8,7 @@ se sb sr
 se cul
 
 ":h highlight
+se cursorlineopt=line
 hi CursorLine cterm=NONE ctermbg=LightGrey ctermfg=None
 
 ":h no
