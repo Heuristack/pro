@@ -37,4 +37,5 @@ se noswapfile
 
 ":h path
 se path+=/Library/Developer/CommandLineTools/usr/include/c++/v1
+se path+=/usr/local/include
 
