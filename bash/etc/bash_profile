@@ -137,7 +137,7 @@ export EDITOR=vim
 export HISTTIMEFORMAT='%F %T  '
 export HISTIGNORE='pwd:ls:l:ll:cd:'
 export HISTCONTROL=ignoredups
-export HISTSIZE=50000
+export HISTSIZE=100000
 
 ##==
 #

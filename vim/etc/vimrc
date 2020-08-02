@@ -10,6 +10,7 @@ se cul
 ":h highlight
 se cursorlineopt=line
 hi CursorLine cterm=NONE ctermbg=LightGrey ctermfg=None
+hi CursorLine cterm=NONE ctermbg=DarkGrey ctermfg=None
 
 ":h no
 no <c-k> <c-w>

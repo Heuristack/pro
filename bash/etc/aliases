@@ -10,5 +10,7 @@ alias cdcode='cd ~/code'
 alias cdboost='cd /usr/local/include/boost'
 alias cdcv='cd /Users/lancel/.icloud/Personal/"11 Resume"/Latest'
 
+alias cdllvm='cd /home/lancel/repositories/llvm-project'
+
 alias week='date +%V'
 
