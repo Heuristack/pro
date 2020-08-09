@@ -1,10 +1,8 @@
 #!/bin/bash
 
 progname=$(basename ${0})
-directory="${HOME}/pro"
-file="${directory}/README.md"
-datecommit=$(date +%a-%V-%y)
-message="update automatic commit and push on ${datecommit}"
+directory="${HOME}/note"
+file="${directory}/note.txt"
 
 function usage()
 {
@@ -21,16 +19,6 @@ function show_file()
     cat ${file}
 }
 
-function push_file()
-{
-    cd ${directory}
-    git status
-    git add ${file}
-    git commit -m "pro: ${message} [note]"
-    git push
-    cd
-}
-
 function main()
 {
     action="${1:-"-e"}"
@@ -44,12 +32,9 @@ function main()
     -e|--edit)
         edit_file
         ;;
-    -p|--push)
-        push_file
-        ;;
     esac
 }
 
-exit
 main "${@}"
+exit
 
