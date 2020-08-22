@@ -11,7 +11,7 @@ function usage()
 
 function edit_file()
 {
-    vim ${file} +0
+    vim ${file} +10000
 }
 
 function show_file()
