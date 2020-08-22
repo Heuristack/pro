@@ -1,0 +1,197 @@
+====================================================================================================
+
+2020
+
+----------------------------------------------------------------------------------------------------
+
+W32 - Performance Benchmarking
+
+----------------------------------------------------------------------------------------------------
+16:32:08:bin$ sudo cpupower frequency-set --governor powersave
+
+/home/lancel/projects/benchmark/build/test/basic_test --benchmark_color=true --benchmark_counters_tabular=true
+2020-08-08T16:29:28+08:00
+Running /home/lancel/projects/benchmark/build/test/basic_test
+Run on (8 X 4000 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x4)
+  L1 Instruction 32 KiB (x4)
+  L2 Unified 256 KiB (x4)
+  L3 Unified 8192 KiB (x1)
+Load Average: 1.41, 1.13, 0.89
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+***WARNING*** Library was built as DEBUG. Timings may be affected.
+----------------------------------------------------------------------------------------
+Benchmark                                              Time             CPU   Iterations
+----------------------------------------------------------------------------------------
+BM_empty                                            4.12 ns         4.12 ns    170346126
+BM_empty/threads:8                                  1.05 ns         8.38 ns     83055408
+BM_spin_empty/8                                     50.6 ns         50.6 ns     13955172
+BM_spin_empty/512                                   2743 ns         2743 ns       255232
+BM_spin_empty/8192                                 43560 ns        43560 ns        16054
+BM_spin_empty/8/threads:8                           11.2 ns         89.8 ns      7809824
+BM_spin_empty/512/threads:8                          624 ns         4865 ns       144448
+BM_spin_empty/8192/threads:8                        9662 ns        77242 ns         8872
+BM_spin_pause_before/8                              49.7 ns         49.7 ns     14059987
+BM_spin_pause_before/512                            2749 ns         2749 ns       254969
+BM_spin_pause_before/8192                          43580 ns        43579 ns        16057
+BM_spin_pause_before/8/threads:8                    11.5 ns         91.8 ns      7604864
+BM_spin_pause_before/512/threads:8                   641 ns         4984 ns       138416
+BM_spin_pause_before/8192/threads:8                10074 ns        80514 ns         8648
+BM_spin_pause_during/8                               605 ns          607 ns      1116976
+BM_spin_pause_during/512                            3308 ns         3311 ns       211725
+BM_spin_pause_during/8192                          44136 ns        44137 ns        15849
+BM_spin_pause_during/8/threads:8                     120 ns          947 ns       735528
+BM_spin_pause_during/512/threads:8                   736 ns         5784 ns       119944
+BM_spin_pause_during/8192/threads:8                10060 ns        80468 ns         8680
+BM_pause_during                                      562 ns          564 ns      1189337
+BM_pause_during/threads:8                            110 ns          875 ns       835072
+BM_pause_during/real_time                            562 ns          563 ns      1239472
+BM_pause_during/real_time/threads:8                  110 ns          876 ns      6285768
+BM_spin_pause_after/8                               49.8 ns         49.8 ns     14078625
+BM_spin_pause_after/512                             2749 ns         2749 ns       254782
+BM_spin_pause_after/8192                           43640 ns        43640 ns        16031
+BM_spin_pause_after/8/threads:8                     11.3 ns         90.1 ns      7738656
+BM_spin_pause_after/512/threads:8                    634 ns         4947 ns       140424
+BM_spin_pause_after/8192/threads:8                  9991 ns        79081 ns         8792
+BM_spin_pause_before_and_after/8                    50.1 ns         50.1 ns     13823756
+BM_spin_pause_before_and_after/512                  2741 ns         2741 ns       254873
+BM_spin_pause_before_and_after/8192                43565 ns        43564 ns        16055
+BM_spin_pause_before_and_after/8/threads:8          11.4 ns         90.6 ns      7767544
+BM_spin_pause_before_and_after/512/threads:8         652 ns         4925 ns       141176
+BM_spin_pause_before_and_after/8192/threads:8       9921 ns        78864 ns         8840
+BM_empty_stop_start                                 2.36 ns         2.36 ns    293163498
+BM_empty_stop_start/threads:8                      0.593 ns         4.55 ns    153435384
+BM_KeepRunning                                      4.56 ns         4.56 ns    151929005
+BM_KeepRunningBatch                                0.036 ns        0.036 ns   1000000091
+BM_RangedFor                                        2.67 ns         2.67 ns    262925859
+
+Process finished with exit code 0
+
+----------------------------------------------------------------------------------------------------
+16:49:20:bin$ sudo cpupower frequency-set --governor performance
+
+/home/lancel/projects/benchmark/build/test/basic_test --benchmark_color=true --benchmark_counters_tabular=true
+2020-08-08T16:49:45+08:00
+Running /home/lancel/projects/benchmark/build/test/basic_test
+Run on (8 X 4000 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x4)
+  L1 Instruction 32 KiB (x4)
+  L2 Unified 256 KiB (x4)
+  L3 Unified 8192 KiB (x1)
+Load Average: 0.11, 0.16, 0.37
+***WARNING*** Library was built as DEBUG. Timings may be affected.
+----------------------------------------------------------------------------------------
+Benchmark                                              Time             CPU   Iterations
+----------------------------------------------------------------------------------------
+BM_empty                                            3.98 ns         3.98 ns    171726634
+BM_empty/threads:8                                  1.05 ns         8.41 ns     82841248
+BM_spin_empty/8                                     48.2 ns         48.2 ns     14617034
+BM_spin_empty/512                                   2668 ns         2668 ns       262056
+BM_spin_empty/8192                                 44610 ns        44609 ns        16342
+BM_spin_empty/8/threads:8                           11.2 ns         89.8 ns      8618720
+BM_spin_empty/512/threads:8                          645 ns         4715 ns       142720
+BM_spin_empty/8192/threads:8                        9960 ns        78302 ns         9688
+BM_spin_pause_before/8                              49.0 ns         49.0 ns     14555201
+BM_spin_pause_before/512                            2645 ns         2645 ns       252081
+BM_spin_pause_before/8192                          44097 ns        44095 ns        16689
+BM_spin_pause_before/8/threads:8                    11.5 ns         90.1 ns      7975784
+BM_spin_pause_before/512/threads:8                   663 ns         4963 ns       137760
+BM_spin_pause_before/8192/threads:8                10117 ns        80886 ns         8600
+BM_spin_pause_during/8                               584 ns          586 ns      1147412
+BM_spin_pause_during/512                            3214 ns         3217 ns       220297
+BM_spin_pause_during/8192                          42654 ns        42655 ns        16388
+BM_spin_pause_during/8/threads:8                     120 ns          931 ns       734568
+BM_spin_pause_during/512/threads:8                   739 ns         5787 ns       127680
+BM_spin_pause_during/8192/threads:8                10074 ns        80543 ns         8624
+BM_pause_during                                      563 ns          564 ns      1279736
+BM_pause_during/threads:8                            114 ns          858 ns       797040
+BM_pause_during/real_time                            551 ns          553 ns      1262057
+BM_pause_during/real_time/threads:8                  110 ns          877 ns      6355816
+BM_spin_pause_after/8                               49.4 ns         49.4 ns     13767991
+BM_spin_pause_after/512                             2799 ns         2799 ns       254068
+BM_spin_pause_after/8192                           44860 ns        44859 ns        16220
+BM_spin_pause_after/8/threads:8                     11.3 ns         90.4 ns      7806528
+BM_spin_pause_after/512/threads:8                    632 ns         4952 ns       139928
+BM_spin_pause_after/8192/threads:8                  9997 ns        79637 ns         8824
+BM_spin_pause_before_and_after/8                    47.8 ns         47.8 ns     14462464
+BM_spin_pause_before_and_after/512                  2631 ns         2631 ns       263937
+BM_spin_pause_before_and_after/8192                42530 ns        42529 ns        16630
+BM_spin_pause_before_and_after/8/threads:8          11.5 ns         88.4 ns      7966464
+BM_spin_pause_before_and_after/512/threads:8         636 ns         4962 ns       140160
+BM_spin_pause_before_and_after/8192/threads:8      10134 ns        79331 ns         8792
+BM_empty_stop_start                                 2.30 ns         2.30 ns    265992697
+BM_empty_stop_start/threads:8                      0.596 ns         4.48 ns    149199520
+BM_KeepRunning                                      4.69 ns         4.69 ns    137913221
+BM_KeepRunningBatch                                0.036 ns        0.036 ns   1000000091
+BM_RangedFor                                        2.62 ns         2.62 ns    269727646
+
+Process finished with exit code 0
+
+----------------------------------------------------------------------------------------------------
+/**
+ *
+ * First cache line optimization
+ *
+**/
+// Offset tests to ensure commonly accessed data is on the first cache line.
+const int cache_line_size = 64;
+static_assert(offsetof(State, error_occurred_) <= (cache_line_size - sizeof(error_occurred_)), "");
+----------------------------------------------------------------------------------------------------
+gdb) i threads
+  Id   Target Id                                       Frame
+* 1    Thread 0x7f7626557740 (LWP 238518) "basic_test" BM_RangedFor (state=...) at /home/lancel/projects/benchmark/test/basic_test.cc:127
+(gdb) bt
+#0  BM_RangedFor (state=...) at /home/lancel/projects/benchmark/test/basic_test.cc:127
+#1  0x0000000000412af1 in benchmark::internal::FunctionBenchmark::Run (this=0x19af7c0, st=...) at /home/lancel/projects/benchmark/src/benchmark_register.cc:503
+#2  0x000000000046cfbf in benchmark::internal::BenchmarkInstance::Run (this=0x19b80a0, iters=1, thread_id=0, timer=0x7ffc213325b8, manager=0x19b0da0) at /home/lancel/projects/benchmark/src/benchmark_api_internal.cc:9
+#3  0x000000000044ad9b in benchmark::internal::(anonymous namespace)::RunInThread (b=0x19b80a0, iters=1, thread_id=0, manager=0x19b0da0) at /home/lancel/projects/benchmark/src/benchmark_runner.cc:117
+#4  0x000000000044a5ff in benchmark::internal::(anonymous namespace)::BenchmarkRunner::DoNIterations (this=0x7ffc21332d40) at /home/lancel/projects/benchmark/src/benchmark_runner.cc:208
+#5  0x0000000000449efb in benchmark::internal::(anonymous namespace)::BenchmarkRunner::DoOneRepetition (this=0x7ffc21332d40, repetition_index=0) at /home/lancel/projects/benchmark/src/benchmark_runner.cc:299
+#6  0x0000000000449cb5 in benchmark::internal::(anonymous namespace)::BenchmarkRunner::BenchmarkRunner (this=0x7ffc21332d40, b_=..., complexity_reports_=0x7ffc21332e78) at /home/lancel/projects/benchmark/src/benchmark_runner.cc:155
+#7  0x0000000000449946 in benchmark::internal::RunBenchmark (b=..., complexity_reports=0x7ffc21332e78) at /home/lancel/projects/benchmark/src/benchmark_runner.cc:347
+#8  0x000000000040b17f in benchmark::internal::(anonymous namespace)::RunBenchmarks (benchmarks=std::vector of length 41, capacity 48 = {...}, display_reporter=0x19afb70, file_reporter=0x0) at /home/lancel/projects/benchmark/src/benchmark.cc:274
+#9  0x000000000040ab00 in benchmark::RunSpecifiedBenchmarks (display_reporter=0x19afb70, file_reporter=0x0) at /home/lancel/projects/benchmark/src/benchmark.cc:446
+#10 0x000000000040a5c3 in benchmark::RunSpecifiedBenchmarks () at /home/lancel/projects/benchmark/src/benchmark.cc:372
+#11 0x00000000004099ad in main (argc=1, argv=0x7ffc213333f8) at /home/lancel/projects/benchmark/test/basic_test.cc:147
+#12 0x00007f76265830b3 in __libc_start_main (main=0x409960 <main(int, char**)>, argc=3, argv=0x7ffc213333f8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7ffc213333e8) at ../csu/libc-start.c:308
+#13 0x0000000000407a8e in _start ()
+
+----------------------------------------------------------------------------------------------------
+template <typename strategy, typename graph, typename visitor>
+auto strategic_search(graph const & g, typename graph::node_type const & n, visitor const & c) -> void
+{
+    return search<strategies::container<strategy>::type,graph,visitor>(g,n,c);
+}
+----------------------------------------------------------------------------------------------------
+
+In file included from graph.h:22,
+                 from main.cpp:1:
+internal/search.hpp: In instantiation of ‘void {anonymous}::strategic_search(const graph&, const typename graph::node_type&, const visitor&) [with strategy = {anonymous}::strategies::DFS; graph = {anonymous}::graph<{anonymous}::node<std::__cxx11::basic_string<char> >, {anonymous}::edge<std::__cxx11::basic_string<char>, double> >; visitor = main(int, const char**)::<lambda(const auto:22&)>; typename graph::node_type = {anonymous}::node<std::__cxx11::basic_string<char> >]’:
+main.cpp:22:44:   required from here
+internal/search.hpp:60:12: error: dependent-name ‘{anonymous}::strategies::container<strategy>::type’ is parsed as a non-type, but instantiation yields a type
+   60 |     return search<strategies::container<strategy>::type,graph,visitor>(g,n,c);
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+internal/search.hpp:60:12: note: say ‘typename {anonymous}::strategies::container<strategy>::type’ if a type is meant
+internal/search.hpp:60:77: error: return-statement with a value, in function returning ‘void’ [-fpermissive]
+   60 |     return search<strategies::container<strategy>::type,graph,visitor>(g,n,c);
+      |                                                                             ^
+----------------------------------------------------------------------------------------------------
+16:33:27:graph$ clang++ main.cpp -std=c++17
+In file included from main.cpp:1:
+In file included from ./graph.h:22:
+./internal/search.hpp:60:52: error: use of alias template 'type' requires template arguments
+return search<strategies::container<strategy>::type,graph,visitor>(g,n,c);
+                                                ^
+main.cpp:22:5: note: in instantiation of function template specialization '(anonymous namespace)::strategic_search<(anonymous namespace)::strategies::DFS, (anonymous namespace)::graph<(anonymous namespace)::node<std::__cxx11::basic_string<char> >, (anonymous namespace)::edge<std::__cxx11::basic_string<char>, double>, default_list, default_map>, (lambda at main.cpp:17:14)>' requested here
+strategic_search<strategies::DFS>(g,n,v);
+^
+./internal/search.hpp:53:34: note: template is declared here
+    template <typename node> using type = sequential<typename conditional<is_same<strategy,strategies::DFS>::value,stack<node>,queue<node>>::type>;
+    ~~~~~~~~~~~~~~~~~~~~~~~~ ^
+1 error generated.
+----------------------------------------------------------------------------------------------------
+
+====================================================================================================
+
