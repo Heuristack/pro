@@ -15,6 +15,7 @@ function usage()
     echo "     [-n|--new]"
     echo "     [-e|--edit]"
     echo "     [-s|--show]"
+    echo "     [-g|--compile]"
     echo "     [-r|--run]"
     echo "     [-l|--link]"
     echo "     [-c|--commit <message>]"
@@ -134,6 +135,9 @@ function main()
         ;;
     -s|--show)
         show_file
+        ;;
+    -g|--compile)
+        compile
         ;;
     -r|--run)
         compile
