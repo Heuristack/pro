@@ -15,10 +15,10 @@ function usage()
     echo "     [-n|--new]"
     echo "     [-e|--edit]"
     echo "     [-s|--show]"
-    echo "     [-g|--compile]"
+    echo "     [-c|--compile]"
     echo "     [-r|--run]"
     echo "     [-l|--link]"
-    echo "     [-c|--commit <message>]"
+    echo "     [-m|--commit <message>]"
     echo "     [-p|--push]"
     echo "     [   --reset]"
     echo "     [   --recover]"
@@ -136,7 +136,7 @@ function main()
     -s|--show)
         show_file
         ;;
-    -g|--compile)
+    -c|--compile)
         compile
         ;;
     -r|--run)
@@ -146,7 +146,7 @@ function main()
     -l|--link)
         link
         ;;
-    -c|--commit)
+    -m|--commit)
         commit "${2}"
         ;;
     -p|--push)
