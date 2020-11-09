@@ -7,14 +7,14 @@ alias cdcode='cd ~/code'
 alias cdnote='cd ~/note'
 alias cdprog='cd ~/repositories/programming'
 alias cdalgo='cd ~/repositories/programming/algo/2020'
+alias cdprob='cd ~/repositories/programming/problems/2020'
 alias cdlibs='cd ~/repositories/programming/lang/libs'
 alias cdpcpp='cd ~/repositories/programming/books/pcpp'
 alias cdccia='cd ~/repositories/programming/books/ccia'
 
 alias cdboost='cd /usr/local/include/boost'
-alias cdcv='cd /Users/lancel/.icloud/Personal/"11 Resume"/Latest'
-
 alias cdllvm='cd /home/lancel/repositories/llvm-project'
 
+alias cdcv='cd /Users/lancel/.icloud/Personal/"11 Resume"/Latest'
 alias week='date +%V'
 
