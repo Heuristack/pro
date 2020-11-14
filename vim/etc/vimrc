@@ -43,4 +43,5 @@ se path+=/Library/Developer/CommandLineTools/usr/include/c++/v1
 se path+=/usr/local/include
 se path+=/Users/lancel/repositories/programming/algo/2020
 se path+=/Users/lancel/repositories/programming/algo/2020/graph
+se path+=/Users/lancel/repositories/programming/algo/2020/sorting
 
