@@ -45,3 +45,7 @@ se path+=/Users/lancel/repositories/programming/algo/2020
 se path+=/Users/lancel/repositories/programming/algo/2020/graph
 se path+=/Users/lancel/repositories/programming/algo/2020/sorting
 
+":h nmap
+nm <F1> <nop>
+
+
