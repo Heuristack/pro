@@ -22,3 +22,5 @@ alias week='date +%V'
 alias cd0='cd ~/tmp/0'
 alias cd1='cd ~/tmp/1'
 
+export PATH=/Users/lancel/Library/Python/3.9/bin:/usr/local/opt/python/libexec/bin:$PATH
+
